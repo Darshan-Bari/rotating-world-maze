@@ -2,7 +2,7 @@
 
 A computer graphics project: guide the ball to the goal by rotating the whole maze 90 degrees at a time. Gravity always pulls toward the bottom of the screen. Red spikes send you back to the start.
 
-**Play in the browser:** https://YOUR_USERNAME.github.io/rotating-world-maze/
+**Play in the browser:** https://darshan-bari.github.io/rotating-world-maze/
 
 ## Controls
 
