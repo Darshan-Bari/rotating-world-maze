@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" font-family="Segoe UI, Arial, sans-serif">
+  <!-- background -->
+  <rect x="0" y="0" width="640" height="520" fill="#ffffff"/>
+
+  <!-- title -->
+  <text x="320" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#e2622a">Rotating-World Maze — Concept</text>
+
+  <!-- rotation arc arrow (drawn around the maze) -->
+  <g stroke="#e2622a" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M 130 120 A 180 180 0 0 1 510 120"/>
+  </g>
+  <polygon points="510,120 494,104 512,96" fill="#e2622a"/>
+  <text x="320" y="90" text-anchor="middle" font-size="18" font-weight="600" fill="#e2622a">Q / E : rotate maze 90°</text>
+
+  <!-- maze square (the rotating world) -->
+  <rect x="200" y="150" width="240" height="240" fill="#1f2530" rx="6"/>
+  <rect x="200" y="150" width="240" height="240" fill="none" stroke="#5a6270" stroke-width="3" rx="6"/>
+
+  <!-- a couple of walls inside -->
+  <rect x="270" y="150" width="16" height="150" fill="#dde0e8"/>
+  <rect x="360" y="240" width="16" height="150" fill="#dde0e8"/>
+
+  <!-- goal (teal) -->
+  <rect x="392" y="352" width="34" height="28" fill="#4ccc9f"/>
+  <text x="409" y="345" text-anchor="middle" font-size="13" fill="#4ccc9f" font-weight="600">Goal</text>
+
+  <!-- ball (coral) with highlight -->
+  <circle cx="240" cy="185" r="16" fill="#f4602f"/>
+  <circle cx="234" cy="179" r="5" fill="#ffc19e"/>
+  <text x="240" y="150" text-anchor="middle" font-size="13" fill="#f4602f" font-weight="600">Ball</text>
+
+  <!-- gravity arrow (always points down) -->
+  <g stroke="#3a86ff" stroke-width="5" fill="none" stroke-linecap="round">
+    <line x1="540" y1="180" x2="540" y2="350"/>
+  </g>
+  <polygon points="540,370 525,345 555,345" fill="#3a86ff"/>
+  <text x="540" y="165" text-anchor="middle" font-size="16" font-weight="600" fill="#3a86ff">Gravity</text>
+  <text x="540" y="395" text-anchor="middle" font-size="13" fill="#3a86ff">(always down)</text>
+
+  <!-- caption -->
+  <text x="320" y="440" text-anchor="middle" font-size="15" fill="#333">Gravity stays fixed downward — the player rotates the whole</text>
+  <text x="320" y="462" text-anchor="middle" font-size="15" fill="#333">maze so the ball falls toward the goal.</text>
+  <text x="320" y="495" text-anchor="middle" font-size="13" fill="#888">Rotation about the maze center (Unit 4) + gravity-driven physics</text>
+</svg>

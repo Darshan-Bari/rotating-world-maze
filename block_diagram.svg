@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="900" viewBox="0 0 760 900" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="760" height="900" fill="#ffffff"/>
+  <text x="380" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#b30000">System Block Diagram</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Start (rounded) -->
+  <rect x="300" y="60" width="160" height="46" rx="23" fill="#f4602f"/>
+  <text x="380" y="89" text-anchor="middle" font-size="17" font-weight="600" fill="#fff">Start</text>
+
+  <!-- Init -->
+  <rect x="250" y="140" width="260" height="56" rx="6" fill="#eef1f7" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="163" text-anchor="middle" font-size="15" fill="#222">Initialize OpenGL + GLUT</text>
+  <text x="380" y="183" text-anchor="middle" font-size="12" fill="#555">window, projection, input callbacks</text>
+
+  <!-- Load level -->
+  <rect x="250" y="228" width="260" height="56" rx="6" fill="#eef1f7" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="251" text-anchor="middle" font-size="15" fill="#222">Build Levels + Load Level</text>
+  <text x="380" y="271" text-anchor="middle" font-size="12" fill="#555">ball start, goal, walls</text>
+
+  <!-- Game loop container -->
+  <rect x="120" y="320" width="520" height="300" rx="10" fill="#fbf7f0" stroke="#e2622a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="140" y="345" font-size="15" font-weight="700" fill="#e2622a">Game Loop  (~60 FPS)</text>
+
+  <rect x="180" y="360" width="400" height="46" rx="6" fill="#ffffff" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="388" text-anchor="middle" font-size="14" fill="#222">1. Handle Input  (Arrows move / Q,E rotate / R restart)</text>
+
+  <rect x="180" y="420" width="400" height="46" rx="6" fill="#ffffff" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="448" text-anchor="middle" font-size="14" fill="#222">2. Update State  (gravity + smooth rotation)</text>
+
+  <rect x="180" y="480" width="400" height="46" rx="6" fill="#ffffff" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="508" text-anchor="middle" font-size="14" fill="#222">3. Collision Detection &amp; Resolution</text>
+
+  <rect x="180" y="540" width="400" height="56" rx="6" fill="#ffffff" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="563" text-anchor="middle" font-size="14" fill="#222">4. Render Scene</text>
+  <text x="380" y="582" text-anchor="middle" font-size="11.5" fill="#555">Bresenham, Midpoint circle, Clipping, Bezier, Shading</text>
+
+  <!-- Decision goal -->
+  <polygon points="380,650 500,700 380,750 260,700" fill="#eef1f7" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="697" text-anchor="middle" font-size="14" fill="#222">Goal reached?</text>
+  <text x="380" y="716" text-anchor="middle" font-size="11.5" fill="#555">No = loop / Yes</text>
+
+  <!-- Decision more levels -->
+  <polygon points="380,780 500,825 380,870 260,825" fill="#eef1f7" stroke="#5a6270" stroke-width="2"/>
+  <text x="380" y="822" text-anchor="middle" font-size="13" fill="#222">More levels?</text>
+  <text x="380" y="840" text-anchor="middle" font-size="11" fill="#555">Yes = next / No</text>
+
+  <!-- Win / End -->
+  <rect x="560" y="800" width="150" height="46" rx="23" fill="#4ccc9f"/>
+  <text x="635" y="829" text-anchor="middle" font-size="15" font-weight="600" fill="#0a3a2c">Win screen</text>
+
+  <!-- flow arrows -->
+  <g stroke="#444" stroke-width="2" fill="none">
+    <line x1="380" y1="106" x2="380" y2="140" marker-end="url(#arrow)"/>
+    <line x1="380" y1="196" x2="380" y2="228" marker-end="url(#arrow)"/>
+    <line x1="380" y1="284" x2="380" y2="360" marker-end="url(#arrow)"/>
+    <line x1="380" y1="406" x2="380" y2="420" marker-end="url(#arrow)"/>
+    <line x1="380" y1="466" x2="380" y2="480" marker-end="url(#arrow)"/>
+    <line x1="380" y1="526" x2="380" y2="540" marker-end="url(#arrow)"/>
+    <line x1="380" y1="596" x2="380" y2="650" marker-end="url(#arrow)"/>
+    <line x1="380" y1="750" x2="380" y2="780" marker-end="url(#arrow)"/>
+    <!-- more levels: yes -> back to load level -->
+    <path d="M 260 825 L 90 825 L 90 256 L 250 256" marker-end="url(#arrow)"/>
+    <!-- more levels: no -> win -->
+    <line x1="500" y1="825" x2="560" y2="823" marker-end="url(#arrow)"/>
+    <!-- goal no -> back into loop (render) -->
+    <path d="M 500 700 L 680 700 L 680 383 L 580 383" marker-end="url(#arrow)"/>
+  </g>
+  <text x="700" y="695" text-anchor="middle" font-size="12" fill="#b30000">No</text>
+  <text x="100" y="815" font-size="12" fill="#0a7a4a">Yes</text>
+  <text x="530" y="815" font-size="12" fill="#b30000">No</text>
+  <text x="392" y="770" font-size="12" fill="#0a7a4a">Yes</text>
+</svg>

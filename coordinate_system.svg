@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="600" viewBox="0 0 620 600" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="620" height="600" fill="#ffffff"/>
+  <text x="310" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#b30000">World Coordinate System</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#333"/>
+    </marker>
+    <marker id="rot" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e2622a"/>
+    </marker>
+  </defs>
+
+  <!-- the 600x600 world square (drawn 460px, origin bottom-left) -->
+  <!-- square from (80,500) top-left in SVG down to represent y-up world -->
+  <rect x="80" y="80" width="460" height="460" fill="#1f2530"/>
+  <rect x="80" y="80" width="460" height="460" fill="none" stroke="#5a6270" stroke-width="2.5"/>
+
+  <!-- axes (origin at bottom-left = SVG 80,540) -->
+  <g stroke="#333" stroke-width="2.5">
+    <line x1="80" y1="540" x2="575" y2="540" marker-end="url(#a)"/>   <!-- X -->
+    <line x1="80" y1="540" x2="80"  y2="55"  marker-end="url(#a)"/>   <!-- Y -->
+  </g>
+  <text x="588" y="545" font-size="15" font-weight="600" fill="#333">X</text>
+  <text x="72"  y="50"  font-size="15" font-weight="600" fill="#333">Y</text>
+
+  <!-- corner labels -->
+  <text x="60"  y="560" font-size="13" fill="#333">(0, 0)</text>
+  <text x="500" y="560" font-size="13" fill="#333">(600, 0)</text>
+  <text x="20"  y="78"  font-size="13" fill="#333">(0, 600)</text>
+  <text x="470" y="72"  font-size="13" fill="#333">(600, 600)</text>
+
+  <!-- center pivot at world (300,300) = SVG (310, 310) -->
+  <line x1="290" y1="310" x2="330" y2="310" stroke="#e2622a" stroke-width="2"/>
+  <line x1="310" y1="290" x2="310" y2="330" stroke="#e2622a" stroke-width="2"/>
+  <circle cx="310" cy="310" r="6" fill="#e2622a"/>
+  <text x="322" y="300" font-size="14" font-weight="700" fill="#e2622a">Pivot (300, 300)</text>
+
+  <!-- rotation arc around pivot -->
+  <path d="M 380 310 A 70 70 0 0 1 310 380" fill="none" stroke="#e2622a" stroke-width="3" marker-end="url(#rot)"/>
+  <text x="360" y="400" font-size="12.5" fill="#e2622a">90° rotation</text>
+
+  <!-- ball + goal for context -->
+  <circle cx="160" cy="150" r="15" fill="#f4602f"/>
+  <circle cx="155" cy="145" r="4.5" fill="#ffc19e"/>
+  <text x="140" y="128" font-size="12" fill="#f4602f" font-weight="600">Ball</text>
+
+  <rect x="430" y="470" width="40" height="34" fill="#4ccc9f"/>
+  <text x="450" y="463" text-anchor="middle" font-size="12" fill="#4ccc9f" font-weight="600">Goal</text>
+
+  <text x="310" y="580" text-anchor="middle" font-size="13" fill="#555">600 × 600 world space · maze rotates about center (300, 300)</text>
+</svg>

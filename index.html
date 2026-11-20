@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rotating-World Maze</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #212633; color: #e6ebf2;
+                 font-family: Helvetica, Arial, sans-serif; }
+    body { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    canvas { display: block; touch-action: none; }
+    #pad { display: flex; gap: 10px; margin: 8px 0 12px; }
+    #pad button { width: 64px; height: 52px; font-size: 22px; border: 0; border-radius: 10px;
+                  background: #39415a; color: #e6ebf2; touch-action: none; user-select: none; }
+    #pad button:active { background: #f5805a; }
+    @media (hover: hover) and (pointer: fine) { #pad { display: none; } }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="pad">
+    <button data-key="ArrowLeft" aria-label="Move left">&#9664;</button>
+    <button data-key="q" aria-label="Rotate counter-clockwise">&#10226;</button>
+    <button data-key="r" aria-label="Restart">R</button>
+    <button data-key="e" aria-label="Rotate clockwise">&#10227;</button>
+    <button data-key="ArrowRight" aria-label="Move right">&#9654;</button>
+  </div>
+  <script src="engine.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

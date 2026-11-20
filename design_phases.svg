@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#b30000">Design — Project Phases</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e2622a"/>
+    </marker>
+  </defs>
+
+  <!-- helper: 8 phase boxes in 2 rows, snake flow -->
+  <!-- Row 1 -->
+  <g>
+    <rect x="40"  y="90" width="180" height="70" rx="8" fill="#f4602f"/>
+    <text x="130" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1. Concept</text>
+    <text x="130" y="142" text-anchor="middle" font-size="11.5" fill="#ffe6da">idea + CG mapping</text>
+
+    <rect x="260" y="90" width="180" height="70" rx="8" fill="#ef7a4f"/>
+    <text x="350" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2. Setup</text>
+    <text x="350" y="142" text-anchor="middle" font-size="11.5" fill="#ffe6da">OpenGL + GLUT</text>
+
+    <rect x="480" y="90" width="180" height="70" rx="8" fill="#f4602f"/>
+    <text x="570" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3. Objects</text>
+    <text x="570" y="142" text-anchor="middle" font-size="11.5" fill="#ffe6da">ball, walls, goal</text>
+
+    <rect x="700" y="90" width="180" height="70" rx="8" fill="#ef7a4f"/>
+    <text x="790" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4. Algorithms</text>
+    <text x="790" y="142" text-anchor="middle" font-size="11" fill="#ffe6da">Bresenham, Bezier...</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g>
+    <rect x="700" y="250" width="180" height="70" rx="8" fill="#f4602f"/>
+    <text x="790" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">5. Game Logic</text>
+    <text x="790" y="302" text-anchor="middle" font-size="11.5" fill="#ffe6da">physics, rotation</text>
+
+    <rect x="480" y="250" width="180" height="70" rx="8" fill="#ef7a4f"/>
+    <text x="570" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">6. Levels</text>
+    <text x="570" y="302" text-anchor="middle" font-size="11.5" fill="#ffe6da">5 levels</text>
+
+    <rect x="260" y="250" width="180" height="70" rx="8" fill="#f4602f"/>
+    <text x="350" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">7. Animation + UI</text>
+    <text x="350" y="302" text-anchor="middle" font-size="11" fill="#ffe6da">loop, particles, menus</text>
+
+    <rect x="40"  y="250" width="180" height="70" rx="8" fill="#4ccc9f"/>
+    <text x="130" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#0a3a2c">8. Testing</text>
+    <text x="130" y="302" text-anchor="middle" font-size="11.5" fill="#0a3a2c">tune + refine</text>
+  </g>
+
+  <!-- arrows row1 -->
+  <g stroke="#e2622a" stroke-width="3" fill="none">
+    <line x1="220" y1="125" x2="260" y2="125" marker-end="url(#arr)"/>
+    <line x1="440" y1="125" x2="480" y2="125" marker-end="url(#arr)"/>
+    <line x1="660" y1="125" x2="700" y2="125" marker-end="url(#arr)"/>
+    <!-- down connector row1 -> row2 -->
+    <path d="M 790 160 L 790 250" marker-end="url(#arr)"/>
+    <!-- arrows row2 (right to left) -->
+    <line x1="700" y1="285" x2="660" y2="285" marker-end="url(#arr)"/>
+    <line x1="480" y1="285" x2="440" y2="285" marker-end="url(#arr)"/>
+    <line x1="260" y1="285" x2="220" y2="285" marker-end="url(#arr)"/>
+  </g>
+
+  <text x="450" y="400" text-anchor="middle" font-size="14" fill="#555">Each phase builds on the previous one, from concept to a tested, playable game.</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="760" fill="#ffffff"/>
+
+  <!-- ================= Table 1 title ================= -->
+  <text x="30" y="36" font-size="20" font-weight="700" fill="#b30000">OpenGL / GLUT Functions</text>
+
+  <!-- header row -->
+  <rect x="30" y="50" width="270" height="40" fill="#e2622a"/>
+  <rect x="300" y="50" width="570" height="40" fill="#e2622a"/>
+  <text x="45" y="76" font-size="15" font-weight="700" fill="#fff">Function</text>
+  <text x="315" y="76" font-size="15" font-weight="700" fill="#fff">Description</text>
+
+  <!-- rows -->
+  <g font-size="13.5" fill="#222">
+    <!-- row backgrounds -->
+    <rect x="30" y="90"  width="840" height="34" fill="#fbf3ee"/>
+    <rect x="30" y="124" width="840" height="34" fill="#ffffff"/>
+    <rect x="30" y="158" width="840" height="34" fill="#fbf3ee"/>
+    <rect x="30" y="192" width="840" height="34" fill="#ffffff"/>
+    <rect x="30" y="226" width="840" height="34" fill="#fbf3ee"/>
+    <rect x="30" y="260" width="840" height="34" fill="#ffffff"/>
+    <rect x="30" y="294" width="840" height="34" fill="#fbf3ee"/>
+    <rect x="30" y="328" width="840" height="34" fill="#ffffff"/>
+    <rect x="30" y="362" width="840" height="34" fill="#fbf3ee"/>
+
+    <text x="45" y="112" font-weight="600">glutInit()</text>
+    <text x="315" y="112">Starts interaction between the windowing system and OpenGL</text>
+    <text x="45" y="146" font-weight="600">glutInitDisplayMode()</text>
+    <text x="315" y="146">Sets double buffering and RGB color mode</text>
+    <text x="45" y="180" font-weight="600">glutCreateWindow()</text>
+    <text x="315" y="180">Opens the OpenGL window with a title</text>
+    <text x="45" y="214" font-weight="600">glutDisplayFunc()</text>
+    <text x="315" y="214">Registers the function that draws the scene</text>
+    <text x="45" y="248" font-weight="600">glutKeyboardFunc()</text>
+    <text x="315" y="248">Handles keys (Q, E, R, Space, Esc)</text>
+    <text x="45" y="282" font-weight="600">glutTimerFunc()</text>
+    <text x="315" y="282">Calls update repeatedly for ~60 FPS animation</text>
+    <text x="45" y="316" font-weight="600">glutSwapBuffers()</text>
+    <text x="315" y="316">Swaps buffers for flicker-free rendering</text>
+    <text x="45" y="350" font-weight="600">gluOrtho2D()</text>
+    <text x="315" y="350">Sets up the 2D coordinate system</text>
+    <text x="45" y="384" font-weight="600">glTranslatef() / glRotatef()</text>
+    <text x="315" y="384">Translate and rotate (used to rotate the maze)</text>
+  </g>
+  <!-- grid lines table 1 -->
+  <g stroke="#d9c4b8" stroke-width="1">
+    <line x1="30" y1="90" x2="870" y2="90"/>
+    <line x1="300" y1="50" x2="300" y2="396"/>
+    <rect x="30" y="50" width="840" height="346" fill="none" stroke="#c9a894" stroke-width="1.5"/>
+  </g>
+
+  <!-- ================= Table 2 title ================= -->
+  <text x="30" y="450" font-size="20" font-weight="700" fill="#b30000">Project's Own Functions</text>
+
+  <rect x="30" y="464" width="270" height="40" fill="#e2622a"/>
+  <rect x="300" y="464" width="570" height="40" fill="#e2622a"/>
+  <text x="45" y="490" font-size="15" font-weight="700" fill="#fff">Function</text>
+  <text x="315" y="490" font-size="15" font-weight="700" fill="#fff">Description</text>
+
+  <g font-size="13.5" fill="#222">
+    <rect x="30" y="504" width="840" height="34" fill="#fbf3ee"/>
+    <rect x="30" y="538" width="840" height="34" fill="#ffffff"/>
+    <rect x="30" y="572" width="840" height="34" fill="#fbf3ee"/>
+    <rect x="30" y="606" width="840" height="34" fill="#ffffff"/>
+    <rect x="30" y="640" width="840" height="34" fill="#fbf3ee"/>
+    <rect x="30" y="674" width="840" height="34" fill="#ffffff"/>
+
+    <text x="45" y="526" font-weight="600">bresenham()</text>
+    <text x="315" y="526">Draws lines (border, walls, guide line) using Bresenham's algorithm</text>
+    <text x="45" y="560" font-weight="600">midpointCircle()</text>
+    <text x="315" y="560">Draws the ball's outline using the Midpoint circle algorithm</text>
+    <text x="45" y="594" font-weight="600">cohenSutherland()</text>
+    <text x="315" y="594">Clips the guide line against the play area</text>
+    <text x="45" y="628" font-weight="600">drawBezier()</text>
+    <text x="315" y="628">Draws a cubic Bezier curve above the goal</text>
+    <text x="45" y="662" font-weight="600">update()</text>
+    <text x="315" y="662">Main loop: gravity, rotation animation, and game states</text>
+    <text x="45" y="696" font-weight="600">resolveX() / resolveY()</text>
+    <text x="315" y="696">Detect and resolve ball-vs-wall collisions</text>
+  </g>
+  <g stroke="#d9c4b8" stroke-width="1">
+    <line x1="30" y1="504" x2="870" y2="504"/>
+    <line x1="300" y1="464" x2="300" y2="708"/>
+    <rect x="30" y="464" width="840" height="244" fill="none" stroke="#c9a894" stroke-width="1.5"/>
+  </g>
+</svg>
